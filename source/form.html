@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>HTML Academy: Cat-energy</title>
+  <link rel="preload" href="fonts/opensans.woff2" as="font">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="page-header">
+    <nav class="main-nav main-nav--closed">
+      <a href="#0" class="main-nav__logo">
+        <img class="main-nav__logo-image" src="#0" alt="Интернет-магазин Cat-energy">
+        <span class="main-nav__logo-text"><b>cat</b>energy</span>
+      </a>
+      <button class="main-nav__toggle" type="button">Открыть меню</button>
+    </nav>
+  </header>
+  <main class="page-main">
+    <h1 class="page-main__title">Подбор программы</h1>
+    <section class="form-knitting">
+      <h2 class="form-knitting__title">Заполните анкету и мы подберем программу питания для вашего кота</h2>
+      <form class="form" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="form__fieldset">
+          <ul class="form__list form__list--data">
+            <li class="field-data">
+              <label><span class="field-data__inquiry">имя:&#9913;</span><input  type="text" placeholder="Имя" name="name"></label>
+            </li>
+            <li class="field-data">
+              <label><span class="field-data__inquiry">вес (кг):&#9913;</span><input  type="text" placeholder="Вес" name="weight"></label>
+            </li>
+            <li class="field-data">
+              <label><span class="field-data__inquiry">возраст (лет):</span><input  type="text" placeholder="Возраст" name="age"></label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="form__fieldset">
+          <ul class="form__list form__list--radio">
+            <li class="btn-radio">
+              <input type="radio" name="purpose" value="weight-loss" id="weight-loss" checked="">
+              <label for="weight-loss">
+                <span class="btn-radio__contents">похудение</span>
+              </label>
+            </li>
+            <li class="btn-radio">
+              <input type="radio" name="purpose" value="weight-set" id="weight-set">
+              <label for="weight-set">
+                <span class="btn-radio__contents">набор массы</span>
+              </label>
+            </li>
+            <li class="btn-radio">
+              <input type="radio" name="purpose" value="unknown" id="unknown">
+              <label for="unknown">
+                <span class="btn-radio__contents">не знаю (нужен ваш совет)</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="form__fieldset">
+          <h3 class="form__title">Контактные данные(владельца кота)</h3>
+          <ul class="form__list form__list--contacts">
+            <li class="field-data">
+              <label><span class="field-data__inquiry">e-mail:&#9913;</span><input class="field-data__input  field-data__input--email" type="email" placeholder="Ваш e-mail" name="email"></label>
+            </li>
+            <li class="field-data">
+              <label><span class="field-data__inquiry">телефон:&#9913;</span><input class="field-data__input  field-data__input--phone" type="text" placeholder="Ваш телефон" name="phone"></label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="form__fieldset">
+          <h3 class="form__title">Комментарий</h3>
+          <textarea class="form__comment" name="comment" cols="30" rows="6" placeholder="расскажите обо всех повадках кота"></textarea>
+        </fieldset>
+        <fieldset class="form__fieldset">
+          <h3 class="form__title">Дополнительно</h3>
+          <ul class="form__list form__list--checkbox">
+            <li class="btn-checkbox">
+              <input type="checkbox" id="sweetener" name="additional-products" value="sweetener" checked="">
+              <label class="btn-checkbox__label" for="sweetener">сахарозаменитель</label>
+            </li>
+            <li class="btn-checkbox">
+              <input type="checkbox" id="drinking-water" name="additional-products" value="drinking-water">
+              <label class="btn-checkbox__label" for="drinking-water">питьевая вода</label>
+            </li>
+            <li class="btn-checkbox">
+              <input type="checkbox" id="milk" name="additional-products" value="milk">
+              <label class="btn-checkbox__label" for="milk">молоко</label>
+            </li>
+            <li class="btn-checkbox">
+              <input type="checkbox" id="vitamins" name="additional-products" value="vitamins">
+              <label class="btn-checkbox__label" for="vitamins">витамины</label>
+            </li>
+          </ul>
+        </fieldset>
+        <button type="submit" class="form__btn">отправить заявку</button>
+        <p class="form__footnote-surely"><sup>⚹</sup>-Обязательные поля</p>
+      </form>
+    </section>
+    <section class="map">
+      <div class="map__cooperation">
+        <h3 class="map_title">приглашаем к сотрудничеству</h3>
+        <address class="map__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+      </div>
+      <img class="map__image" src="#0" alt="Местонахождени магазин ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+    </section>
+  </main>
+  <footer class="page-footer">
+    <div class="page-footer__menu container">
+      <a href="#0" class="page-footer__logo">
+        <span class="page-footer__logo-text"><b>cat</b>energy</span>
+      </a>
+      <div class="page-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--vk" href="#0">
+              <svg width="23.494px" height="20.168px">
+                <use xlink:href="#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--instagram" href="#0">
+              <svg width="21.769px" height="21.334px">
+                <use xlink:href="#icon-insta"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="#0">
+              <svg width="14.962px" height="27.718px">
+                <use xlink:href="#icon-fb"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__copyright copyright">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="copyright__link-text">HTML Academy</span>
+          <svg width="26.943px" height="34.09px">
+            <use xlink:href="#logo-htmlacademy"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,15 @@
+/* Граница */
+$border: 1px solid #ececec;
+
+/* Цвета */
+
+
+/* Шрифт */
+$font: "Open Sans", arial, sans-serif;
+
+/* Размеры экранов */
+$tablet-width: 768px;
+$desktop-width: 1150px;
+$mobile-width-only: $tablet-width - 1;
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
