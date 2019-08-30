@@ -1,0 +1,62 @@
+.form {
+  padding-top: 15px;
+  margin-bottom: 30px;
+}
+
+.form__fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.form__list {
+  @include list-dumping;
+
+  position: relative;
+  padding: 24px 0;
+
+  &--radio {
+    padding: 20px 0;
+
+    &::before {
+      @include border-before;
+    }
+  }
+
+  &--data {
+    &::before {
+      @include border-before;
+    }
+  }
+
+  &--checkbox {
+    padding-bottom: 35px;
+  }
+}
+
+.form__title {
+  @include title-medium;
+
+  margin: 30px 0;
+}
+
+.form__comment {
+  @include form-label;
+
+  padding: 13px;
+  border: $border;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 150px;
+}
+
+.form__footnote-surely {
+  line-height: 16px;
+  font-family: $font-arial;
+  margin: 0;
+  text-align: center;
+}
+
+.form__btn {
+  margin-bottom: 20px;
+}

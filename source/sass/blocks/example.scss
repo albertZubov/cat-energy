@@ -1,0 +1,96 @@
+.example {
+  padding: 0 20px 35px;
+  background-color: $color-dark-gray;
+}
+
+.example__title {
+  @include title-h2;
+
+  padding: 25px 0;
+}
+
+.example__description {
+  margin: 0;
+  font-family: $font-arial;
+  margin-bottom: 25px;
+}
+
+.example__list {
+  @include list-dumping;
+
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+
+.example__item {
+  width: calc(50% - 16px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: $border;
+  padding: 15px 0;
+  position: relative;
+  border-radius: 5px;
+}
+
+.example__process {
+  @include title-medium;
+}
+
+.example__process-description {
+  font-size: 12px;
+  line-height: 12px;
+  font-family: $font-arial;
+  position: absolute;
+  width: 65px;
+  text-align: center;
+  bottom: -18px;
+  z-index: 5;
+  padding: 0 10px;
+  background-color: $color-dark-gray;
+}
+
+.example__expenses {
+  text-transform: uppercase;
+  color: $color-black;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 35px;
+}
+
+.example__result {
+  padding-left: 44px;
+  padding-right: 38px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: calc(50% - 42px);
+    top: calc(50% - 7px);
+    width: 84px;
+    height: 14px;
+    background-color: $color-white;
+    border-radius: 10px;
+    border: $border;
+    box-sizing: border-box;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: calc(50% - 38px);
+    top: calc(50% - 3px);
+    width: 36px;
+    height: 6px;
+    background-color: $color-green;
+    border-radius: 10px;
+  }
+}
+
+.example__result-text {
+  @include title-small;
+}

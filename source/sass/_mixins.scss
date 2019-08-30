@@ -14,3 +14,79 @@
   overflow: hidden;
 }
 
+@mixin title-h1 {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  margin: 0;
+}
+
+@mixin title-h2 {
+  font-size: 36px;
+  line-height: 60px;
+  font-weight: 400;
+  color: $color-black;
+  margin: 0;
+}
+
+@mixin title-h4 {
+  font-size: 24px;
+  line-height: 37px;
+  font-weight: 400;
+  color: $color-black;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+@mixin title-small {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: $color-black;
+}
+
+@mixin title-medium {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  color: $color-black;
+}
+
+@mixin text-small {
+  font-size: 12px;
+  line-height: 12px;
+  font-family: $font-arial;
+}
+
+@mixin list-dumping {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin form-label {
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $color-light-black;
+  font-weight: 400;
+}
+
+@mixin nav-menu {
+  font-size: 18px;
+  line-height: 24px;
+  color: $color-light-black;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+@mixin border-before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  bottom: 0;
+  height: 1px;
+  width: calc(100% + 40px);
+  background-color: #e6e6e6;
+}

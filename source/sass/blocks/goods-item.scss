@@ -1,0 +1,27 @@
+.goods-item {
+  padding: 18px 0;
+  border-bottom: $border;
+}
+
+.goods-item__title {
+  color: $color-light-black;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.goods-item__description {
+  line-height: 14px;
+  font-family: $font-arial;
+
+  display: flex;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.goods-item__price {
+  margin-left: auto;
+}

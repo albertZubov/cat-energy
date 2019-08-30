@@ -1,0 +1,17 @@
+.page-footer {
+  background-color: $color-dark-gray;
+}
+
+.page-footer__menu {
+  display: flex;
+  flex-direction: column;
+padding: 0 20px;
+}
+
+.page-footer__logo {
+  min-height: 95px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-bottom: $border;
+}

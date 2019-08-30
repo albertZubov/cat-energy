@@ -1,0 +1,40 @@
+.additional-goods {
+  padding: 25px 20px 35px;
+}
+
+.additional-goods__title {
+  @include title-medium;
+
+  margin: 0;
+  padding-bottom: 30px;
+  border-bottom: $border;
+}
+
+.additional-goods__list {
+  @include list-dumping;
+}
+
+.additional-goods__action {
+  margin-top: 40px;
+  min-height: 290px;
+  background: url("../img/gift-photo-mobile@1x.jpg") no-repeat center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & svg {
+    fill: $color-white;
+    margin-top: 65px;
+    margin-bottom: 60px;
+  }
+}
+
+.additional-goods__action-information {
+  font-size: 16px;
+  line-height: 20px;
+  color: $color-white;
+  font-family: $font-arial;
+  margin: 0;
+  text-align: center;
+  padding: 0 50px;
+}

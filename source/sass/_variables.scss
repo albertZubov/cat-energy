@@ -1,11 +1,19 @@
 /* Граница */
-$border: 1px solid #ececec;
+$border: 1px solid #e6e6e6;
 
 /* Цвета */
-
+$color-gray: #444444;
+$color-white: #ffffff;
+$color-green: #68b738;
+$color-black: #111111;
+$color-light-black: #222222;
+$color-dark-gray: #f2f2f2;
+$color-svg-gray: #666666;
+$color-border: #e6e6e6;
 
 /* Шрифт */
-$font: "Open Sans", arial, sans-serif;
+$font: "Oswald", arial, sans-serif;
+$font-arial: "Arial", sans-serif;
 
 /* Размеры экранов */
 $tablet-width: 768px;

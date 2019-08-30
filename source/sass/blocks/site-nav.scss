@@ -1,0 +1,31 @@
+.site-nav {
+  @include list-dumping;
+
+  width: 100%;
+  text-align: center;
+}
+
+.site-nav__link {
+  @include nav-menu;
+
+  padding: 21px 0;
+  width: 100%;
+  display: block;
+  border-bottom: $border;
+}
+
+@media (min-width: $tablet-width) {
+  .site-nav {
+    width: auto;
+    display: flex;
+    margin-left: auto;
+  }
+
+  .site-nav__link {
+    border-bottom: none;
+  }
+
+  .site-nav__point {
+    margin-left: 35px;
+  }
+}

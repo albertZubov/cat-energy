@@ -1,0 +1,30 @@
+.catalog-item {
+  padding: 20px 20px 25px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border-bottom: $border;
+}
+
+.catalog-item__title {
+  @include title-small;
+
+  margin: 0;
+  width: 90px;
+  margin-bottom: 15px;
+}
+
+.catalog-item__list {
+  @include text-small;
+
+  width: 100%;
+}
+
+.catalog-item__block {
+  width: 50%;
+}
+
+.catalog-item__line {
+  display: flex;
+  justify-content: space-between;
+}

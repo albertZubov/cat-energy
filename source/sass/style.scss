@@ -1,35 +1,27 @@
-// на pp вообще хрен забил
-
 @import "variables.scss";
 @import "mixins.scss";
-@import "blocks/container.scss";
-@import "blocks/main-nav.scss";
-@import "blocks/sections-product.scss";
-@import "blocks/product-week.scss";
-@import "blocks/page-main.scss";
-@import "blocks/page-footer.scss";
 @import "blocks/fonts.scss";
-@import "blocks/shortly-about.scss";
-@import "blocks/about.scss";
-@import "blocks/responses.scss";
-@import "blocks/contacts.scss";
-@import "blocks/catalog.scss";
-@import "blocks/catalog-item.scss";
-@import "blocks/production-process.scss";
-@import "blocks/form.scss";
-@import "blocks/btn-radio.scss";
-@import "blocks/btn-checkbox.scss";
-@import "blocks/field-data.scss";
+@import "blocks/scaffolding.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/page-main.scss";
+@import "blocks/selection-program.scss";
+@import "blocks/button.scss";
+@import "blocks/container.scss";
+@import "blocks/advantage.scss";
+@import "blocks/example.scss";
+@import "blocks/map.scss";
 @import "blocks/social.scss";
 @import "blocks/copyright.scss";
-@import "blocks/scaffolding.scss";
-@import "blocks/product-list.scss";
-@import "blocks/sale-list.scss";
-@import "blocks/basket.scss";
-@import "blocks/user-nav.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/catalog.scss";
+@import "blocks/additional-goods.scss";
+@import "blocks/form-knitting.scss";
+@import "blocks/form.scss";
+@import "blocks/field-data.scss";
+@import "blocks/btn-radio.scss";
+@import "blocks/btn-checkbox.scss";
 @import "blocks/site-nav.scss";
-@import "blocks/modal-basket.scss";
-@import "blocks/overlay.scss";
-@import "blocks/svg-sprite.scss";
-@import "blocks/nojs.scss";
-@import "blocks/button.scss";
+@import "blocks/catalog-item.scss";
+@import "blocks/goods-item.scss";
+
+

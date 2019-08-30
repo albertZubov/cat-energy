@@ -1,0 +1,33 @@
+.field-data {
+  display: flex;
+  min-height: 45px;
+  margin-bottom: 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  & input {
+    @include form-label;
+
+    color: $color-gray;
+    height: 100%;
+    box-sizing: border-box;
+    border: $border;
+    margin-left: 15px;
+    width: 100%;
+    padding-left: 15px;
+  }
+
+  & label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.field-data__inquiry {
+  @include form-label;
+
+  flex-shrink: 0;
+}

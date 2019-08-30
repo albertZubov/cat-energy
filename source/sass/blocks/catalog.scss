@@ -1,0 +1,39 @@
+.catalog__title {
+  @include visually-hidden;
+}
+
+.catalog__list {
+  @include list-dumping;
+}
+
+.catalog__show-title {
+  @include title-small;
+
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.catalog__show-description {
+  @include text-small;
+
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.catalog__show-btn {
+  background-color: $color-dark-gray;
+  color: $color-gray;
+}
+
+.catalog__show-product {
+  padding: 25px 20px;
+  border-bottom: $border;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & svg {
+    opacity: .2;
+  }
+}

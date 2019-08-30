@@ -1,0 +1,25 @@
+.map {
+  line-height: 0;
+}
+
+.map_title {
+  @include title-small;
+
+  margin: 0;
+}
+
+.map__address {
+  line-height: 20px;
+  font-family: $font-arial;
+  font-style: normal;
+}
+
+.map__cooperation {
+  padding: 25px 20px;
+  display: flex;
+  justify-content: space-between;
+
+  &--others {
+    background-color: $color-dark-gray;
+  }
+}
