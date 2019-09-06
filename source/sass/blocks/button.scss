@@ -9,4 +9,12 @@
   min-height: 40px;
   width: 100%;
   font-family: $font;
+  padding: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .button {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }

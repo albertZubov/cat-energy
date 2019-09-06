@@ -60,3 +60,59 @@
 .form__btn {
   margin-bottom: 20px;
 }
+
+@media (min-width: $tablet-width) {
+  .form__title {
+    @include block-divider;
+
+    font-size: 36px;
+    line-height: 36px;
+    background: white;
+    margin-left: -25px;
+    padding: 0 25px;
+    width: fit-content;
+
+    &::before {
+      left: -45px;
+      width: 100vw;
+    }
+  }
+
+  .form__list {
+    &--radio {
+      border: $border;
+      padding: 25px;
+    }
+
+    &--checkbox {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .form__comment {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form__title {
+    &::before {
+      left: -20vw;
+      width: calc(100vw + 50vw);
+    }
+  }
+
+  .form__list {
+    &--data,
+    &--radio {
+      width: calc(50% - 40px);
+      box-sizing: border-box;
+    }
+  }
+}

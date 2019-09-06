@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page">
-  <header class="page-header">
+  <header class="page-header container">
     <nav class="main-nav main-nav--closed">
       <a href="#0" class="main-nav__logo">
         <img class="main-nav__logo-image" src="img/logo-mobile.svg" alt="Интернет-магазин Cat-energy" width="193" height="38">
@@ -22,9 +22,9 @@
     </nav>
   </header>
   <main class="page-main">
-    <h1 class="page-main__title page-main__title--catalog">Каталог продукции</h1>
-    <section class="catalog">
-      <h2 class="catalog__title">Каталог продукции cat energy pro и cat energy slim</h2>
+    <section class="catalog container">
+      <h1 class="catalog__title main-title">Каталог продукции</h1>
+      <h2 class="catalog__middle-title">Каталог продукции cat energy pro и cat energy slim</h2>
       <ul class="catalog__list">
         <li class="catalog-item">
           <img src="img/chicken-small-mobile@1x.jpg" alt="Товар cat energy" class="catalog-item__image">
@@ -40,7 +40,7 @@
                 <td class="catalog-item__field">Курица</td>
               </tr>
               <tr class="catalog-item__line">
-                <td class="catalog-item__value">цена</td>
+                <td class="catalog-item__value">Цена</td>
                 <td class="catalog-item__field">700 Р.</td>
               </tr>
             </table>
@@ -173,62 +173,64 @@
           </div>
           <button class="catalog-item__btn button">заказать</button>
         </li>
+        <li class="catalog__item-show">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30px" height="30px" x="0px" y="0px" viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
+            <style type="text/css">
+              .st0 {
+                fill: #231F20;
+              }
+            </style>
+            <polygon class="st0" points="30,14 16,14 16,0 14,0 14,14 0,14 0,16 14,16 14,30 16,30 16,16 30,16 "/>
+          </svg>
+          <h3 class="catalog__show-title">показать еще 100500 товаров</h3>
+          <p class="catalog__show-description">На самом деле вкусов гораздо больше!</p>
+          <button class="catalog__show-btn button">показать все</button>
+        </li>
       </ul>
-      <div class="catalog__show-product">
-        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30px" height="30px" x="0px" y="0px" viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
-          <style type="text/css">
-            .st0 {
-              fill: #231F20;
-            }
-          </style>
-          <polygon class="st0" points="30,14 16,14 16,0 14,0 14,14 0,14 0,16 14,16 14,30 16,30 16,16 30,16 "/>
-        </svg>
-        <h3 class="catalog__show-title">показать еще 100500 товаров</h3>
-        <p class="catalog__show-description">На самом деле вкусов гораздо больше!</p>
-        <button class="catalog__show-btn button">показать все</button>
-      </div>
     </section>
     <section class="additional-goods">
       <h2 class="additional-goods__title">Дополнительные товары</h2>
-      <ul class="additional-goods__list">
-        <li class="goods-item">
-          <h3 class="goods-item__title">сахарозаменитель</h3>
-          <p class="goods-item__description">1 упаковка (100 г)<span class="goods-item__price">100 Р.</span></p>
-          <button class="goods-item__btn button">заказать</button>
-        </li>
-        <li class="goods-item">
-          <h3 class="goods-item__title">питьевая вода</h3>
-          <p class="goods-item__description">5 литров<span class="goods-item__price">50 Р.</span></p>
-          <button class="goods-item__btn button">заказать</button>
-        </li>
-        <li class="goods-item">
-          <h3 class="goods-item__title">молоко</h3>
-          <p class="goods-item__description">1 литр<span class="goods-item__price">100 Р.</span></p>
-          <button class="goods-item__btn button">заказать</button>
-        </li>
-        <li class="goods-item">
-          <h3 class="goods-item__title">витамины</h3>
-          <p class="goods-item__description">1 упаковка (30 г)<span class="goods-item__price">300 Р.</span></p>
-          <button class="goods-item__btn button">заказать</button>
-        </li>
-      </ul>
-      <aside class="additional-goods__action">
-        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="55" height="60" x="0px" y="0px" viewBox="0 0 55.5 60" style="enable-background:new 0 0 55.5 60;" xml:space="preserve">
-          <path
-          d="M52.3,12.2h-7c0.5-0.7,0.8-1.4,1.1-2.2c0.6-2,0.4-4.1-0.6-5.9c-1-1.8-2.6-3.1-4.6-3.7c-2-0.6-4.1-0.4-5.9,0.6
-          c-3.6,2-6.2,6.1-7.6,9c-1.4-2.9-4-7.1-7.6-9c-3.8-2-8.5-0.6-10.5,3.1c-1.4,2.7-1.2,5.8,0.5,8.1h-7c-1.7,0-3.1,1.4-3.1,3.1v9.4
-          c0,1.7,1.4,3.1,3.1,3.1H4v26.1c0,3.3,2.7,6,6,6h35.5c3.3,0,6-2.7,6-6V27.8h0.8c1.7,0,3.1-1.4,3.1-3.1v-9.4
-          C55.5,13.6,54.1,12.2,52.3,12.2z M36.5,3c1.3-0.7,2.7-0.8,4.1-0.4C41.9,3,43,3.9,43.7,5.2c0.7,1.3,0.8,2.7,0.4,4.1
-          c-0.4,1.2-1.1,2.2-2.2,2.9H29.4C30.5,9.6,33,5,36.5,3z M11.7,5.2C13.2,2.6,16.4,1.6,19,3c3.5,1.9,6,6.6,7.1,9.1H13.5
-          C11.2,10.7,10.4,7.6,11.7,5.2z M26.5,27.8v13.7H6.4V27.8H26.5z M6.4,53.9v-10h20.2v13.7H10C8,57.6,6.4,55.9,6.4,53.9z M45.5,57.6
-          H28.9V43.9h20.2v10C49.1,55.9,47.5,57.6,45.5,57.6z M49.1,41.5H28.9V27.8h20.2V41.5z M53.1,24.7c0,0.4-0.3,0.7-0.7,0.7h-2
-          c0,0,0,0,0,0s0,0,0,0H27.7c0,0,0,0,0,0s0,0,0,0H5.2c0,0,0,0,0,0s0,0,0,0h-2c-0.4,0-0.7-0.3-0.7-0.7v-9.4c0-0.4,0.3-0.7,0.7-0.7h49.2
-          c0.4,0,0.7,0.3,0.7,0.7V24.7z"/>
-        </svg>
-        <p class="additional-goods__action-information">
-          Закажите все и получите чехол для кота в подарок!
-        </p>
-      </aside>
+      <div class="additional-goods__block container">
+        <ul class="additional-goods__list">
+          <li class="goods-item">
+            <h3 class="goods-item__title">сахарозаменитель</h3>
+            <p class="goods-item__description">1 упаковка (100 г)<span class="goods-item__price">100 Р.</span></p>
+            <button class="goods-item__btn button">заказать</button>
+          </li>
+          <li class="goods-item">
+            <h3 class="goods-item__title">питьевая вода</h3>
+            <p class="goods-item__description">5 литров<span class="goods-item__price">50 Р.</span></p>
+            <button class="goods-item__btn button">заказать</button>
+          </li>
+          <li class="goods-item">
+            <h3 class="goods-item__title">молоко</h3>
+            <p class="goods-item__description">1 литр<span class="goods-item__price">100 Р.</span></p>
+            <button class="goods-item__btn button">заказать</button>
+          </li>
+          <li class="goods-item">
+            <h3 class="goods-item__title">витамины</h3>
+            <p class="goods-item__description">1 упаковка (30 г)<span class="goods-item__price">300 Р.</span></p>
+            <button class="goods-item__btn button">заказать</button>
+          </li>
+        </ul>
+        <aside class="additional-goods__action">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="55" height="60" x="0px" y="0px" viewBox="0 0 55.5 60" style="enable-background:new 0 0 55.5 60;" xml:space="preserve">
+            <path
+            d="M52.3,12.2h-7c0.5-0.7,0.8-1.4,1.1-2.2c0.6-2,0.4-4.1-0.6-5.9c-1-1.8-2.6-3.1-4.6-3.7c-2-0.6-4.1-0.4-5.9,0.6
+            c-3.6,2-6.2,6.1-7.6,9c-1.4-2.9-4-7.1-7.6-9c-3.8-2-8.5-0.6-10.5,3.1c-1.4,2.7-1.2,5.8,0.5,8.1h-7c-1.7,0-3.1,1.4-3.1,3.1v9.4
+            c0,1.7,1.4,3.1,3.1,3.1H4v26.1c0,3.3,2.7,6,6,6h35.5c3.3,0,6-2.7,6-6V27.8h0.8c1.7,0,3.1-1.4,3.1-3.1v-9.4
+            C55.5,13.6,54.1,12.2,52.3,12.2z M36.5,3c1.3-0.7,2.7-0.8,4.1-0.4C41.9,3,43,3.9,43.7,5.2c0.7,1.3,0.8,2.7,0.4,4.1
+            c-0.4,1.2-1.1,2.2-2.2,2.9H29.4C30.5,9.6,33,5,36.5,3z M11.7,5.2C13.2,2.6,16.4,1.6,19,3c3.5,1.9,6,6.6,7.1,9.1H13.5
+            C11.2,10.7,10.4,7.6,11.7,5.2z M26.5,27.8v13.7H6.4V27.8H26.5z M6.4,53.9v-10h20.2v13.7H10C8,57.6,6.4,55.9,6.4,53.9z M45.5,57.6
+            H28.9V43.9h20.2v10C49.1,55.9,47.5,57.6,45.5,57.6z M49.1,41.5H28.9V27.8h20.2V41.5z M53.1,24.7c0,0.4-0.3,0.7-0.7,0.7h-2
+            c0,0,0,0,0,0s0,0,0,0H27.7c0,0,0,0,0,0s0,0,0,0H5.2c0,0,0,0,0,0s0,0,0,0h-2c-0.4,0-0.7-0.3-0.7-0.7v-9.4c0-0.4,0.3-0.7,0.7-0.7h49.2
+            c0.4,0,0.7,0.3,0.7,0.7V24.7z"/>
+          </svg>
+          <p class="additional-goods__action-information">
+            Закажите все и получите чехол для кота в подарок!
+          </p>
+        </aside>
+      </div>
     </section>
     <section class="map">
       <div class="map__cooperation map__cooperation--others">

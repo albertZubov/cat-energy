@@ -8,27 +8,29 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page">
-  <header class="page-header">
-    <nav class="main-nav main-nav--closed">
+  <header class="page-header container">
+    <nav class="main-nav main-nav--closed main-nav--index">
       <a href="#0" class="main-nav__logo">
         <img class="main-nav__logo-image" src="img/logo-mobile.svg" alt="Интернет-магазин Cat-energy" width="193" height="38">
       </a>
       <button class="main-nav__toggle" type="button">Открыть меню</button>
       <ul class="site-nav">
-        <li class="site-nav__point"><a href="#0" class="site-nav__link">главная</a></li>
-        <li class="site-nav__point"><a href="#0" class="site-nav__link">каталог продукции</a></li>
-        <li class="site-nav__point"><a href="#0" class="site-nav__link">подбор программы</a></li>
+        <li class="site-nav__point"><a href="#0" class="site-nav__link site-nav__link--index">главная</a></li>
+        <li class="site-nav__point"><a href="#0" class="site-nav__link site-nav__link--index">каталог продукции</a></li>
+        <li class="site-nav__point"><a href="#0" class="site-nav__link site-nav__link--index">подбор программы</a></li>
       </ul>
     </nav>
   </header>
   <main class="page-main">
-    <h1 class="page-main__title page-main__title--index">Функциональное питание для котов</h1>
-    <section class="selection-program">
-      <h3 class="selection-program__title">занялся собой? займись котом!</h3>
-      <div class="selection-program__img-wrap">
-        <img class="selection-program__image" src="img/index-can-mobile@1x.png" alt="Корм для котов">
+    <section class="selection-program container">
+      <h1 class="selection-program__title main-title">Функциональное питание для котов</h1>
+      <div class="selection-program__block">
+        <h3 class="selection-program__middle-title">занялся собой? займись котом!</h3>
+        <div class="selection-program__img-wrap">
+          <img class="selection-program__image" src="img/index-can-mobile@1x.png" alt="Корм для котов">
+        </div>
+        <button class="selection-program__link button" type="button">подобрать программу</button>
       </div>
-      <button class="selection-program__link button" type="button">подобрать программу</button>
       <ul class="selection-program__list">
         <li class="selection-program__item">
           <span class="selection-program__svg-inner selection-program__svg-inner--loss"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="49" x="0px" y="0px" viewBox="0 0 70 97" style="enable-background:new 0 0 70 97;" xml:space="preserve">
@@ -53,7 +55,7 @@
           <a href="#0" class="selection-program__item-link">каталог slim</a>
         </li>
         <li class="selection-program__item">
-          <span class="selection-program__svg-inner"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="67" height="28" x="0px" y="0px" viewBox="0 0 134 56" style="enable-background:new 0 0 134 56;" xml:space="preserve">
+          <span class="selection-program__svg-inner selection-program__svg-inner--set"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="67" height="28" x="0px" y="0px" viewBox="0 0 134 56" style="enable-background:new 0 0 134 56;" xml:space="preserve">
             <g>
               <path
               d="M123.1,5.8c1.2-1.9,2.7-3.4,4.5-4.6c1-0.7,1.6-0.7,2.2,0.6c0.8,1.9,1.5,3.9,0.9,6c-0.2,0.8-0.1,1.4,0.4,2.1
@@ -83,7 +85,7 @@
         </li>
       </ul>
     </section>
-    <section class="advantage">
+    <section class="advantage container">
       <h2 class="advantage__title">Как это работает</h2>
       <ul class="advantage__list">
         <li class="advantage__item">
@@ -101,17 +103,26 @@
       </ul>
     </section>
     <section class="example">
-      <h2 class="example__title">Живой пример</h2>
-      <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-      <ul class="example__list">
-        <li class="example__item"><b class="example__process">5 кг</b><span class="example__process-description">снижение веса</span></li>
-        <li class="example__item"><b class="example__process">60 дней</b><span class="example__process-description">затрачено времени</span></li>
-      </ul>
-      <p class="example__expenses">затраты на питание: 15 000 руб.</p>
-      <img src="img/before-mobile@1x.png" alt="Фото кота до похудения">
-      <div class="example__result">
-        <span class="example__result-text">было</span>
-        <span class="example__result-text">стало</span>
+      <div class="example__block container">
+        <h2 class="example__title">Живой пример</h2>
+        <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+        <ul class="example__list">
+          <li class="example__item"><b class="example__process">5 кг</b><span class="example__process-description">снижение веса</span></li>
+          <li class="example__item"><b class="example__process">60 дней</b><span class="example__process-description">затрачено времени</span></li>
+        </ul>
+        <p class="example__expenses">затраты на питание: <span class="example__expenses-price">15 000 руб.</span></p>
+        <div class="example__images">
+          <div class="example__images-before">
+            <img src="img/before-mobile@1x.png" alt="Фото кота до похудения">
+          </div>
+          <div class="example__images-after">
+            <img src="img/after-mobile@1x.png" alt="Фото кота после похудения">
+          </div>
+        </div>
+        <div class="example__result">
+          <span class="example__result-text example__result-text--toggle">было</span>
+          <span class="example__result-text">стало</span>
+        </div>
       </div>
     </section>
     <section class="map">

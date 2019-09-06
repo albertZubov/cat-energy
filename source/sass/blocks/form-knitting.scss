@@ -3,9 +3,37 @@
 }
 
 .form-knitting__title {
+  padding: 30px 0 35px 20px;
+}
+
+.form-knitting__middle-title {
   text-transform: uppercase;
   font-weight: 400;
   font-size: 14px;
   margin: 0;
   padding-right: 30px;
+}
+
+@media (min-width: $tablet-width) {
+  .form-knitting {
+    padding-left: 70px;
+    padding-right: 67px;
+  }
+
+  .form-knitting__title {
+    padding-left: 0;
+  }
+
+  .form-knitting__middle-title {
+    font-size: 20px;
+    line-height: 30px;
+    color: $color-black;
+    width: 360px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form-knitting {
+    padding: 0;
+  }
 }

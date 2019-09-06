@@ -58,3 +58,23 @@
     display: none;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .main-nav {
+    min-height: 168px;
+    padding: 0;
+
+    &--index {
+      &::before {
+        content: "";
+        position: absolute;
+        right: -110px;
+        top: 0;
+        width: 720px;
+        height: 696px;
+        z-index: -1;
+        background: url("../img/index-background-desktop@1x.jpg") no-repeat center;
+      }
+    }
+  }
+}

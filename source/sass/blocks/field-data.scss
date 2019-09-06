@@ -31,3 +31,16 @@
 
   flex-shrink: 0;
 }
+
+@media (min-width: $tablet-width) {
+  .field-data {
+    & input {
+      font-size: 20px;
+    }
+  }
+
+  .field-data__inquiry {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}

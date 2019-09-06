@@ -28,3 +28,63 @@
   display: flex;
   justify-content: space-between;
 }
+
+@media (min-width: $tablet-width) {
+  .catalog-item {
+    flex-direction: column;
+    width: calc(50% - 30px);
+    box-sizing: border-box;
+    background-color: $color-dark-gray;
+    margin-bottom: 65px;
+    border: none;
+    padding: 0 37px 40px;
+
+    &:nth-child(odd) {
+      margin-right: 60px;
+    }
+
+    & img {
+      margin-top: -60px;
+      margin-bottom: 45px;
+    }
+  }
+
+  .catalog-item__block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .catalog-item__title {
+    font-size: 20px;
+    text-align: center;
+    width: 150px;
+    align-self: center;
+  }
+
+  .catalog-item__list {
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 33px;
+  }
+
+  .catalog-item__line {
+    border-bottom: $border;
+    padding: 5px 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog-item {
+    width: calc(25% - 60px);
+    margin-right: 80px;
+
+    &:nth-child(odd) {
+      margin-right: 80px;
+    }
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+}

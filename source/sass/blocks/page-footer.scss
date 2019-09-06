@@ -5,7 +5,7 @@
 .page-footer__menu {
   display: flex;
   flex-direction: column;
-padding: 0 20px;
+  padding: 0 20px;
 }
 
 .page-footer__logo {
@@ -14,4 +14,28 @@ padding: 0 20px;
   justify-content: center;
   width: 100%;
   border-bottom: $border;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer__menu {
+    padding: 0 30px;
+    flex-direction: row;
+    min-height: 150px;
+  }
+
+  .page-footer__logo,
+  .page-footer__social,
+  .page-footer__copyright {
+    width: calc(100% / 3);
+  }
+
+  .page-footer__logo {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer__menu {
+    padding: 0 110px;
+  }
 }

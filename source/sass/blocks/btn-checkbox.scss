@@ -37,3 +37,25 @@
   height: 16px;
   background: url("../img/icon-tick.svg") no-repeat center;
 }
+
+@media (min-width: $tablet-width) {
+  .btn-checkbox {
+    width: 50%;
+    margin-bottom: 30px;
+
+    & label {
+      font-size: 20px;
+      line-height: 20px;
+
+      &::before {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
+  .btn-checkbox input:checked ~ label::after {
+    top: 12px;
+    left: 10px;
+  }
+}

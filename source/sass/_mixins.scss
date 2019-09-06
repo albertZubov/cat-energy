@@ -90,3 +90,18 @@
   width: calc(100% + 40px);
   background-color: #e6e6e6;
 }
+
+@mixin block-divider {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(50% + 3px);
+    height: 3px;
+    background-color: $color-green;
+    z-index: -2;
+  }
+}
