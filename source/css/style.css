@@ -1221,13 +1221,21 @@ textarea {
     line-height: 30px; } }
 
 @media (min-width: 1220px) {
+  .form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
   .form__title::before {
     left: -20vw;
     width: calc(100vw + 50vw); }
-  .form__list--data, .form__list--radio {
-    width: calc(50% - 40px);
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box; } }
+  .form__fieldset {
+    width: 100%; }
+    .form__fieldset--data, .form__fieldset--radio {
+      width: calc(50% - 40px);
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box; } }
 
 .field-data {
   display: -webkit-box;
