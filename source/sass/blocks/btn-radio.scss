@@ -16,6 +16,7 @@
     display: flex;
     align-items: center;
     position: relative;
+    cursor: pointer;
 
     &::before {
       content: "";
@@ -26,6 +27,14 @@
       border-radius: 50%;
       box-sizing: border-box;
       margin-right: 15px;
+    }
+
+    &:hover::before {
+      border-color: $color-gray-btn-hvr;
+    }
+
+    &:active {
+      opacity: 0.3;
     }
   }
 }

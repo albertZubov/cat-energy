@@ -10,6 +10,19 @@
   width: 100%;
   font-family: $font;
   padding: 0;
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    background-color: $color-green-btn;
+  }
+
+  &:active,
+  &focus {
+    color: rgba(255, 255, 255, 0.3);
+    outline: none;
+    border: none;
+  }
 }
 
 @media (min-width: $tablet-width) {

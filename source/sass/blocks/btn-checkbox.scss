@@ -11,6 +11,7 @@
     display: flex;
     align-items: center;
     position: relative;
+    cursor: pointer;
 
     &::before {
       content: "";
@@ -20,6 +21,14 @@
       border: 1px solid #cdcdcd;
       box-sizing: border-box;
       margin-right: 15px;
+    }
+
+    &:hover::before {
+      border-color: $color-gray-btn-hvr;
+    }
+
+    &:active {
+      opacity: 0.3;
     }
   }
 
@@ -35,7 +44,7 @@
   left: 5px;
   width: 21px;
   height: 16px;
-  background: url("../img/icon-tick.svg") no-repeat center;
+  background: url("../img/svg_inline/icon-tick.svg") no-repeat center;
 }
 
 @media (min-width: $tablet-width) {
@@ -57,5 +66,11 @@
   .btn-checkbox input:checked ~ label::after {
     top: 12px;
     left: 10px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .btn-checkbox {
+    width: 245px;
   }
 }

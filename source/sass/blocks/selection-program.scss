@@ -107,9 +107,37 @@
     display: inline-block;
     width: 24px;
     height: 11px;
-    background: url("../img/icon-right-arrow-verylong.svg") no-repeat center;
-    padding-bottom: 3px;
+    background: url("../img/svg_inline/icon-right-arrow-long.svg") no-repeat center;
+    padding-bottom: 5px;
     margin-left: 10px;
+    transition: width 0.1s;
+  }
+
+  &:hover {
+    padding-top: 1px;
+
+    &::after {
+      width: 33px;
+      background: url("../img/svg_inline/icon-right-arrow-verylong.svg") no-repeat center;
+      padding-bottom: 4px;
+      transition: width 0.1s;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    &::after {
+      width: 24px;
+      background: url("../img/svg_inline/icon-right-arrow-long.svg") no-repeat center;
+    }
+  }
+}
+
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .selection-program__title {
+    background: url("../img/index-background-mobile@2x.jpg") no-repeat center;
+    background-size: 640px auto;
   }
 }
 
@@ -126,11 +154,13 @@
     line-height: 20px;
     color: $color-black;
     text-align: start;
+    padding-left: 90px;
   }
 
   .selection-program__block {
+    position: relative;
     margin: 0;
-    padding: 0 30px 0 120px;
+    padding: 0 30px;
   }
 
   .selection-program__list {
@@ -141,7 +171,9 @@
     margin: 0;
     width: auto;
     padding: 0 25px;
-    transform: translateY(-250px);
+    margin-left: 90px;
+    position: absolute;
+    top: 70px;
   }
 
   .selection-program__item {
@@ -159,6 +191,7 @@
     order: 4;
     font-size: 20px;
     line-height: 20px;
+    align-self: center;
   }
 
   .selection-program__svg-inner {
@@ -203,14 +236,23 @@
 }
 
 @media (min-width: $desktop-width) {
+  .selection-program {
+    position: relative;
+  }
+
   .selection-program__img-wrap {
     position: absolute;
     top: 0;
-    right: 30%;
+    right: 215px;
   }
 
   .selection-program__link {
-    transform: none;
+    position: static;
+    margin: 0;
+  }
+
+  .selection-program__middle-title {
+    padding: 0;
   }
 
   .selection-program__title {
@@ -235,6 +277,7 @@
   }
 
   .selection-program__block {
+    position: static;
     padding-bottom: 320px;
     padding-left: 80px;
   }

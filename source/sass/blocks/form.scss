@@ -48,6 +48,18 @@
   box-sizing: border-box;
   width: 100%;
   min-height: 150px;
+
+  &:hover {
+    border-color: $color-gray-btn-hvr;
+  }
+
+  &:active,
+  &:focus {
+    border: 2px solid $color-gray;
+    outline: none;
+    padding: 12px;
+    box-sizing: border-box;
+  }
 }
 
 .form__footnote-surely {
@@ -71,11 +83,6 @@
     margin-left: -25px;
     padding: 0 25px;
     width: fit-content;
-
-    &::before {
-      left: -45px;
-      width: 100vw;
-    }
   }
 
   .form__list {
@@ -106,13 +113,6 @@
     flex-wrap: wrap;
   }
 
-  .form__title {
-    &::before {
-      left: -20vw;
-      width: calc(100vw + 50vw);
-    }
-  }
-
   .form__fieldset {
     width: 100%;
 
@@ -121,5 +121,47 @@
       width: calc(50% - 40px);
       box-sizing: border-box;
     }
+
+    &--data {
+      margin-right: auto;
+    }
+  }
+
+  .form__list {
+    &--data,
+    &--radio {
+      min-height: 195px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &--data {
+      padding: 0;
+    }
+
+    &--contacts {
+      display: flex;
+      justify-content: space-between;
+
+      & .field-data {
+        width: calc(50% - 40px);
+      }
+    }
+
+    &--checkbox {
+      justify-content: space-between;
+    }
+  }
+
+  .form__btn {
+    width: calc(50% - 40px);
+    margin: 0;
+    margin-right: 82px;
+  }
+
+  .form__footnote-surely {
+    line-height: 32px;
   }
 }

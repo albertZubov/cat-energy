@@ -17,11 +17,36 @@
   & svg {
     fill: $color-svg-gray;
   }
+
+  &:hover svg {
+    fill: $color-green;
+  }
+
+  &:active svg {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .social__list {
     border: none;
     height: 100%;
+  }
+
+  .social__link {
+    &--vk svg {
+      width: 30px;
+      height: 16px;
+    }
+
+    &--instagram svg {
+      width: 23px;
+      height: 23px;
+    }
+
+    &--facebook svg {
+      width: 14px;
+      height: 28px;
+    }
   }
 }

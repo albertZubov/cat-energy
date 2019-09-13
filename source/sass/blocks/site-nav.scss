@@ -23,6 +23,18 @@
 
   .site-nav__link {
     border-bottom: none;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
+    &--active {
+      @include link-active;
+    }
   }
 
   .site-nav__point {
@@ -36,6 +48,23 @@
 
     &--index {
       color: $color-white;
+    }
+
+    &--index:hover {
+      opacity: 0.6;
+    }
+
+    &--index:active {
+      opacity: 0.3;
+    }
+
+    &--active {
+      border-bottom: 2px solid $color-green;
+      padding-bottom: 10px;
+    }
+
+    &--index.site-nav__link--active {
+      border-bottom: 2px solid $color-white;
     }
   }
 }

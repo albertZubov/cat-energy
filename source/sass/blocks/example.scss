@@ -34,6 +34,10 @@
   border-radius: 5px;
 }
 
+.example__images-before {
+  text-align: center;
+}
+
 .example__images-after {
   display: none;
 }
@@ -95,14 +99,21 @@
   }
 }
 
+.example__btn {
+  display: none;
+}
+
 .example__result-text {
   @include title-small;
 }
 
 @media (min-width: $tablet-width) {
   .example {
-    padding: 0 30px;
-    background: none;
+    padding: 0 30px 65px;
+    background: linear-gradient(to left, $color-bright-gray 0%, $color-bright-gray 50%, $color-dark-gray 50%, $color-dark-gray 100%);
+    background-repeat: no-repeat;
+    background-position-y: 100%;
+    background-size: 100% 48%;
   }
 
   .example__block {
@@ -152,49 +163,96 @@
   }
 
   .example__process-description {
-    background: none;
+    background-color: $color-white;
+    width: auto;
+    bottom: -6px;
   }
 
   .example__images {
-    display: flex;
+    position: relative;
     width: 100%;
-    margin: 50px 0;
+    height: 520px;
+    margin-top: 60px;
+  }
+
+  .example__images-before {
+    & picture {
+      position: absolute;
+      clip-path: inset(0 50% 0 0);
+      left: calc(50% - 345px);
+    }
   }
 
   .example__images-after {
-    display: inline-block;
+    display: block;
+
+    & picture {
+      clip-path: inset(0 0 0 50%);
+      left: calc(50% - 345px);
+      position: absolute;
+    }
   }
 
   .example__result-text {
     font-size: 20px;
+    border-bottom: 1px dotted #c8c8c8;
+    padding-bottom: 5px;
+  }
 
-    &--toggle {
-      &::before {
-        content: "";
-        position: absolute;
-        left: calc(50% - 17px);
-        top: -8px;
-        z-index: 5;
-        width: 34px;
-        height: 34px;
-        border-radius: 50%;
-        border: $border;
-        background-color: $color-white;
-        cursor: pointer;
-      }
+  .example__btn {
+    display: block;
+    position: absolute;
+    left: calc(50% - 17px);
+    top: -5px;
+    z-index: 5;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: $border;
+    background-color: $color-white;
+    cursor: pointer;
+    font-size: 0;
+    line-height: 0;
+    padding: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+
+    &:hover {
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
+    }
+
+    &:hover ~ .example__result-text {
+      border-bottom-style: solid;
+    }
+
+    &:active {
+      box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+      border: 2px solid $color-green;
 
       &::after {
-        content: "";
-        position: absolute;
-        left: calc(50% - 3px);
-        top: 6px;
-        z-index: 7;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background-color: $color-green;
-        cursor: pointer;
+        top: 11px;
       }
+    }
+
+    &:active ~ .example__result-text {
+      border-bottom: none;
+      padding-bottom: 6px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: calc(50% - 4px);
+      top: 12px;
+      z-index: 7;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: $color-green;
+      cursor: pointer;
     }
   }
 }
@@ -202,8 +260,31 @@
 @media (min-width: $desktop-width) {
   .example {
     padding: 0;
-    background: linear-gradient(to left, $color-bright-gray 0%, $color-bright-gray 32.8%, $color-dark-gray 32.8%, $color-dark-gray 100%);
     padding-bottom: 65px;
+    background: none;
+    position: relative;
+    margin-top: 180px;
+
+    &::before {
+      content: "";
+      width: calc(50% - 325px);
+      height: 100%;
+      background-color: $color-bright-gray;
+      position: absolute;
+      right: 0;
+      z-index: -1;
+    }
+
+    &::after {
+      content: "";
+      width: calc(50% + 325px);
+      height: 100%;
+      background-color: $color-dark-gray;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+    }
   }
 
   .example__title {
@@ -221,6 +302,10 @@
     padding-right: 62%;
   }
 
+  .example__process-description {
+    background-color: $color-dark-gray;
+  }
+
   .example__list {
     margin-bottom: 60px;
   }
@@ -236,8 +321,9 @@
 
   .example__images {
     position: absolute;
-    right: 0;
-    width: auto;
+    top: -300px;
+    right: -60px;
+    width: 690px;
   }
 
   .example__result {

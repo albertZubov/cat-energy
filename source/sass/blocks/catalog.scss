@@ -41,6 +41,18 @@
 .catalog__show-btn {
   background-color: $color-dark-gray;
   color: $color-gray;
+
+  &:hover {
+    background-color: $color-bright-gray-hvr;
+  }
+
+  &:active,
+  &:focus {
+    color: rgba(68, 68, 68, 0.3);
+    background-color: $color-bright-gray-hvr;
+    outline: none;
+    border: none;
+  }
 }
 
 @media (min-width: $tablet-width) {

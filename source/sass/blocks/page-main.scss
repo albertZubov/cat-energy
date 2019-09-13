@@ -1,6 +1,11 @@
+@media (min-width: $tablet-width) {
+  .page-main {
+    overflow: hidden;
+  }
+}
+
 @media (min-width: $desktop-width) {
   .page-main {
     position: relative;
-    overflow: hidden;
   }
 }

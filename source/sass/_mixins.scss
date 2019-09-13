@@ -88,7 +88,7 @@
   bottom: 0;
   height: 1px;
   width: calc(100% + 40px);
-  background-color: #e6e6e6;
+  background-color: $color-border;
 }
 
 @mixin block-divider {
@@ -97,11 +97,16 @@
   &::before {
     content: "";
     position: absolute;
-    left: 0;
-    right: 0;
+    left: -20vw;
+    width: calc(100vw + 50vw);
     top: calc(50% + 3px);
     height: 3px;
     background-color: $color-green;
     z-index: -2;
   }
+}
+
+@mixin link-active {
+  border-bottom: 2px solid $color-green;
+  padding-bottom: 10px;
 }

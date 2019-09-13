@@ -18,6 +18,7 @@
   margin-top: 40px;
   min-height: 290px;
   background: url("../img/gift-photo-mobile@1x.jpg") no-repeat center;
+  background-size: 280px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,6 +40,13 @@
   padding: 0 50px;
 }
 
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .additional-goods__action {
+    background: url("../img/gift-photo-mobile@2x.jpg") no-repeat center;
+    background-size: 560px auto;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .additional-goods {
     padding: 0;
@@ -51,21 +59,23 @@
     position: relative;
     font-size: 36px;
     line-height: 36px;
-    padding: 0;
-    padding-left: 66px;
-    margin-bottom: 70px;
     border: none;
+    background: $color-white;
+    width: fit-content;
+    margin-left: 42px;
+    margin-bottom: 70px;
+    padding: 0 25px;
   }
 
-  .additional-goods__list {
+  .additional-goods__block {
     padding: 0 30px;
   }
 
   .additional-goods__action {
     margin-top: 70px;
-    padding: 0 30px;
     min-height: 200px;
     background: url("../img/gift-photo-tablet@1x.jpg") no-repeat center;
+    background-size: cover;
     flex-direction: row;
 
     & svg {
@@ -80,9 +90,16 @@
   }
 }
 
+@media (min-width: $tablet-width) and (min-resolution: $retina-dpi), (min-width: $tablet-width) and (min-resolution: $retina-dppx) {
+  .additional-goods__action {
+    background: url("../img/gift-photo-tablet@2x.jpg") no-repeat center;
+    background-size: 1416px auto;
+  }
+}
+
 @media (min-width: $desktop-width) {
   .additional-goods__title {
-    padding-left: calc(50% - 610px);
+    margin-left: calc(50% - 635px);
 
     &::after {
       left: calc(50% - 643px);
@@ -98,14 +115,16 @@
   .additional-goods__block {
     display: flex;
     flex-wrap: wrap;
+    padding: 0;
   }
 
   .additional-goods__action {
     flex-direction: column;
-    width: calc(20% - 59px);
+    width: calc(25% - 55px);
     min-height: 288px;
     margin: 0;
     background: url("../img/gift-photo-desktop@1x.jpg") no-repeat center;
+    background-size: 245px auto;
 
     & svg {
       padding: 0;
@@ -115,5 +134,12 @@
   .additional-goods__action-information {
     padding: 0;
     text-align: center;
+  }
+}
+
+@media (min-width: $desktop-width) and (min-resolution: $retina-dpi), (min-width: $desktop-width) and (min-resolution: $retina-dppx) {
+  .additional-goods__action {
+    background: url("../img/gift-photo-desktop@2x.jpg") no-repeat center;
+    background-size: 490px auto;
   }
 }

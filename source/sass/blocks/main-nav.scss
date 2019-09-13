@@ -8,11 +8,22 @@
 
 .main-nav__logo {
   display: flex;
+  align-items: center;
   line-height: 0;
   width: 100%;
   margin-left: calc(50% - 140px);
   min-height: 66px;
   box-sizing: border-box;
+}
+
+.main-nav__logo-image {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .main-nav__toggle {
@@ -22,7 +33,7 @@
   font-size: 0;
   line-height: 0;
   border: none;
-  background: url("../img/icon-close.svg") no-repeat center center;
+  background: url("../img/svg_inline/icon-close.svg") no-repeat center center;
   width: 24px;
   height: 18px;
 }
@@ -30,7 +41,7 @@
 @media (max-width: $mobile-width-only) {
   .main-nav {
     &--closed &__toggle {
-      background: url("../img/icon-mobile-menu.svg") no-repeat center center;
+      background: url("../img/svg_inline/icon-mobile-menu.svg") no-repeat center center;
       width: 20px;
       height: 22px;
     }
@@ -74,6 +85,18 @@
         height: 696px;
         z-index: -1;
         background: url("../img/index-background-desktop@1x.jpg") no-repeat center;
+        background-size: 720px auto;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) and (min-resolution: $retina-dpi), (min-width: $desktop-width) and (min-resolution: $retina-dppx) {
+  .main-nav {
+    &--index {
+      &::before {
+        background: url("../img/index-background-desktop@2x.jpg") no-repeat center;
+        background-size: 1440px auto;
       }
     }
   }

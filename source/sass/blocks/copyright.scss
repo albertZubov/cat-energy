@@ -8,11 +8,26 @@
   justify-content: space-between;
   align-items: center;
   min-height: 78px;
+
+  &:hover svg {
+    stroke: $color-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $tablet-width) {
+  .copyright {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
   .copyright__link {
-    height: 100%;
+    min-height: auto;
+    align-self: center;
   }
 
   .copyright__link-text {
