@@ -1,3 +1,7 @@
+.selection-program {
+  margin-bottom: 20px;
+}
+
 .selection-program__item {
   font-weight: 400;
   background-color: $color-dark-gray;
@@ -27,11 +31,11 @@
   margin: 0;
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 25px;
+  margin-bottom: 28px;
 }
 
 .selection-program__block {
-  margin-top: -185px;
+  margin-top: -182px;
   padding: 0 20px;
 }
 
@@ -42,7 +46,6 @@
 .selection-program__list {
   @include list-dumping;
 
-  margin-bottom: 25px;
   padding: 0 20px;
 }
 
@@ -50,6 +53,7 @@
   @include title-h4;
 
   line-height: 50px;
+  padding-top: 3px;
 }
 
 .selection-program__svg-inner {
@@ -60,6 +64,7 @@
   align-items: center;
   position: relative;
   padding-right: 10px;
+  margin-left: -7px;
 
   &--loss {
     &::before {
@@ -83,16 +88,17 @@
 
 .selection-program__link {
   margin-bottom: 22px;
+  text-decoration: none;
 }
 
 .selection-program__item-description {
   line-height: 18px;
   margin: 0;
   font-family: $font-arial;
-  margin-top: 25px;
-  padding-bottom: 20px;
+  margin-top: 23px;
+  padding-bottom: 22px;
   border-bottom: $border;
-  margin-bottom: 15px;
+  margin-bottom: 19px;
 }
 
 .selection-program__item-link {
@@ -142,8 +148,12 @@
 }
 
 @media (min-width: $tablet-width) {
+  .selection-program {
+    margin-bottom: 45px;
+  }
+
   .selection-program__title {
-    padding: 35px 80px 25px 120px;
+    padding: 32px 80px 41px 118px;
     background: none;
     min-height: auto;
     text-align: start;
@@ -154,7 +164,8 @@
     line-height: 20px;
     color: $color-black;
     text-align: start;
-    padding-left: 90px;
+    padding-left: 88px;
+    margin-bottom: 20px;
   }
 
   .selection-program__block {
@@ -170,15 +181,19 @@
   .selection-program__link {
     margin: 0;
     width: auto;
-    padding: 0 25px;
+    padding: 16px 26px;
     margin-left: 90px;
     position: absolute;
-    top: 70px;
+    top: 68px;
   }
 
   .selection-program__item {
-    padding: 80px 27px 62px 52px;
+    padding: 72px 27px 63px 52px;
     justify-content: space-between;
+
+    &:first-child {
+      margin-bottom: 30px;
+    }
   }
 
   .selection-program__item-title {
@@ -192,6 +207,10 @@
     font-size: 20px;
     line-height: 20px;
     align-self: center;
+
+    &::after {
+      margin-left: 24px;
+    }
   }
 
   .selection-program__svg-inner {
@@ -206,8 +225,8 @@
     }
 
     &--loss {
-      padding-right: 50px;
-      margin-top: -30px;
+      padding-right: 65px;
+      margin-top: -47px;
 
       & svg {
         width: 140px;
@@ -215,11 +234,13 @@
       }
 
       &::before {
-        top: 10px;
+        top: 26px;
       }
     }
 
     &--set {
+      margin-top: -20px;
+
       & svg {
         width: 268px;
         height: 112px;
@@ -232,18 +253,28 @@
     line-height: 24px;
     width: 360px;
     border: none;
+    margin: 26px 0 33px;
+
+    &--loss {
+      width: 380px;
+    }
+
+    &--set {
+      width: 340px;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .selection-program {
     position: relative;
+    margin-bottom: 74px;
   }
 
   .selection-program__img-wrap {
     position: absolute;
-    top: 0;
-    right: 215px;
+    top: -26px;
+    right: 218px;
   }
 
   .selection-program__link {
@@ -253,11 +284,13 @@
 
   .selection-program__middle-title {
     padding: 0;
+    margin-bottom: 53px;
   }
 
   .selection-program__title {
     width: 420px;
     padding-left: 80px;
+    padding-top: 54px;
   }
 
   .selection-program__list {
@@ -267,9 +300,10 @@
   }
 
   .selection-program__item {
-    width: calc(50% - 33px);
+    width: calc(50% - 40px);
     box-sizing: border-box;
     justify-content: flex-start;
+    padding: 44px 50px 62px 52px;
 
     &:first-child {
       margin: 0;
@@ -278,7 +312,7 @@
 
   .selection-program__block {
     position: static;
-    padding-bottom: 320px;
+    padding-bottom: 268px;
     padding-left: 80px;
   }
 
@@ -290,12 +324,17 @@
 
   .selection-program__item-description {
     width: auto;
+    margin-top: 46px;
+    padding: 0;
+    margin-bottom: 30px;
   }
 
   .selection-program__svg-inner {
     order: 0;
     padding: 0;
     margin: 0;
+    height: 97px;
+    box-sizing: border-box;
 
     &::before {
       width: 100px;
@@ -303,7 +342,8 @@
     }
 
     &--loss {
-      padding-right: 80px;
+      padding-right: 77px;
+      padding-left: 15px;
 
       & svg {
         width: 70px;
@@ -316,10 +356,12 @@
     }
 
     &--set {
-      padding-right: 45px;
+      padding-right: 46px;
+      padding-top: 10px;
+      margin-left: -18px;
 
       & svg {
-        width: 124px;
+        width: 134px;
         height: 56px;
       }
     }

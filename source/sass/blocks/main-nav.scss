@@ -42,8 +42,8 @@
   .main-nav {
     &--closed &__toggle {
       background: url("../img/svg_inline/icon-mobile-menu.svg") no-repeat center center;
-      width: 20px;
-      height: 22px;
+      width: 24px;
+      height: 18px;
     }
 
     &--closed .site-nav {
@@ -55,7 +55,7 @@
 @media (min-width: $tablet-width) {
   .main-nav {
     display: flex;
-    padding: 0 30px;
+    padding: 21px 30px;
     border-bottom: none;
   }
 
@@ -63,6 +63,11 @@
     margin: 0;
     width: auto;
     border-bottom: none;
+  }
+
+  .main-nav__logo-image {
+    width: 173px;
+    height: 58px;
   }
 
   .main-nav__toggle {
@@ -88,6 +93,11 @@
         background-size: 720px auto;
       }
     }
+  }
+
+  .main-nav__logo-image {
+    width: 202px;
+    height: 59px;
   }
 }
 

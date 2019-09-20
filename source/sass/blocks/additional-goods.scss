@@ -1,12 +1,12 @@
 .additional-goods {
-  padding: 25px 20px 35px;
+  padding: 28px 20px 35px;
 }
 
 .additional-goods__title {
   @include title-medium;
 
   margin: 0;
-  padding-bottom: 30px;
+  padding-bottom: 34px;
   border-bottom: $border;
 }
 
@@ -15,18 +15,17 @@
 }
 
 .additional-goods__action {
-  margin-top: 40px;
+  margin-top: 38px;
   min-height: 290px;
   background: url("../img/gift-photo-mobile@1x.jpg") no-repeat center;
-  background-size: 280px auto;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   & svg {
     fill: $color-white;
-    margin-top: 65px;
-    margin-bottom: 60px;
+    margin: 64px 0;
   }
 }
 
@@ -37,7 +36,8 @@
   font-family: $font-arial;
   margin: 0;
   text-align: center;
-  padding: 0 50px;
+  padding-left: 57px;
+  padding-right: 45px;
 }
 
 @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -50,7 +50,7 @@
 @media (min-width: $tablet-width) {
   .additional-goods {
     padding: 0;
-    padding-bottom: 75px;
+    padding-bottom: 78px;
   }
 
   .additional-goods__title {
@@ -62,9 +62,14 @@
     border: none;
     background: $color-white;
     width: fit-content;
-    margin-left: 42px;
-    margin-bottom: 70px;
-    padding: 0 25px;
+    margin-left: 28px;
+    margin-bottom: 80px;
+    padding: 0 38px;
+
+    &::before {
+      width: calc(100vw + 40px);
+      left: -70px;
+    }
   }
 
   .additional-goods__block {
@@ -72,21 +77,24 @@
   }
 
   .additional-goods__action {
-    margin-top: 70px;
+    margin-top: 69px;
     min-height: 200px;
     background: url("../img/gift-photo-tablet@1x.jpg") no-repeat center;
     background-size: cover;
     flex-direction: row;
 
     & svg {
-      padding-left: 90px;
+      margin: 0;
+      margin-bottom: 10px;
+      padding-left: 91px;
     }
   }
 
   .additional-goods__action-information {
     width: 180px;
     text-align: left;
-    padding-left: 276px;
+    padding-left: 277px;
+    padding-top: 3px;
   }
 }
 
@@ -98,11 +106,20 @@
 }
 
 @media (min-width: $desktop-width) {
+  .additional-goods {
+    padding-bottom: 86px;
+  }
+
   .additional-goods__title {
-    margin-left: calc(50% - 635px);
+    margin-left: calc(50% - 648px);
 
     &::after {
       left: calc(50% - 643px);
+    }
+
+    &::before {
+      width: 200vw;
+      left: -100vw;
     }
   }
 
@@ -120,20 +137,24 @@
 
   .additional-goods__action {
     flex-direction: column;
-    width: calc(25% - 55px);
+    justify-content: center;
+    width: calc(25% - 60px);
     min-height: 288px;
     margin: 0;
     background: url("../img/gift-photo-desktop@1x.jpg") no-repeat center;
-    background-size: 245px auto;
+    background-size: cover;
 
     & svg {
       padding: 0;
+      margin-top: 22px;
+      margin-bottom: 62px;
     }
   }
 
   .additional-goods__action-information {
     padding: 0;
     text-align: center;
+    padding-left: 13px;
   }
 }
 

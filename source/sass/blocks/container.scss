@@ -1,4 +1,7 @@
-.container {
-  max-width: $desktop-width;
-  margin: 0 auto;
+
+@media (min-width: $desktop-width) {
+  .container {
+    max-width: $desktop-width;
+    margin: 0 auto;
+  }
 }

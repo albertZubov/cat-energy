@@ -1,13 +1,13 @@
 .field-data {
   display: flex;
   min-height: 45px;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
 
   &--email,
   &--phone {
     & svg {
       position: absolute;
-      right: 15px;
+      right: 14px;
     }
 
     & input:active ~ svg,
@@ -18,6 +18,11 @@
     & input:invalid ~ svg {
       fill: #ff8282;
     }
+  }
+
+  &--email &__input,
+  &--phone &__input {
+    margin-left: 8px;
   }
 
   &:last-child {
@@ -64,12 +69,22 @@
   @include form-label;
 
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+
+  & sup {
+    padding-bottom: 13px;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .field-data {
+    margin-bottom: 20px;
+
     & input {
       font-size: 20px;
+      padding: 10px 17px;
+      margin-left: 16px;
     }
   }
 
@@ -82,5 +97,10 @@
 @media (min-width: $desktop-width) {
   .field-data {
     margin: 0;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }

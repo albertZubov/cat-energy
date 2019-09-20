@@ -1,6 +1,9 @@
 @media (min-width: $tablet-width) {
   .page-main {
-    overflow: hidden;
+    &--catalog,
+    &--form {
+      overflow-x: hidden;
+    }
   }
 }
 

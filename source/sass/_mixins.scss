@@ -93,20 +93,22 @@
 
 @mixin block-divider {
   position: relative;
+  background: white;
+  width: fit-content;
 
   &::before {
     content: "";
     position: absolute;
-    left: -20vw;
-    width: calc(100vw + 50vw);
-    top: calc(50% + 3px);
     height: 3px;
-    background-color: $color-green;
+    background-color: #68b738;
     z-index: -2;
+    top: calc(50% + 2px);
+    width: calc(100vw - 20px);
+    left: 0;
   }
 }
 
 @mixin link-active {
   border-bottom: 2px solid $color-green;
-  padding-bottom: 10px;
+  padding-bottom: 8px;
 }

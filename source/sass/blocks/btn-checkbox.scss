@@ -50,7 +50,12 @@
 @media (min-width: $tablet-width) {
   .btn-checkbox {
     width: 50%;
-    margin-bottom: 30px;
+    margin-bottom: 32px;
+
+    &:nth-child(even) {
+      padding-left: 28px;
+      box-sizing: border-box;
+    }
 
     & label {
       font-size: 20px;
@@ -59,6 +64,7 @@
       &::before {
         width: 40px;
         height: 40px;
+        margin-right: 18px;
       }
     }
   }
@@ -72,5 +78,14 @@
 @media (min-width: $desktop-width) {
   .btn-checkbox {
     width: 245px;
+    margin-right: 80px;
+
+    &:nth-child(even) {
+      padding-left: 0;
+    }
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
   }
 }

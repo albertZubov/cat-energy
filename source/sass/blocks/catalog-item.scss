@@ -1,5 +1,5 @@
 .catalog-item {
-  padding: 20px 20px 25px;
+  padding: 0 20px 24px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -11,7 +11,11 @@
 
   margin: 0;
   width: 90px;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
+}
+
+.catalog-item__title-link{
+  text-decoration: none;
 }
 
 .catalog-item__list {
@@ -20,32 +24,56 @@
   width: 100%;
 }
 
+.catalog-item__value {
+  padding: 0;
+  margin-left: -2px;
+}
+
+.catalog-item__field {
+  margin-right: -4px;
+}
+
 .catalog-item__block {
   width: 50%;
+  margin-left: auto;
+}
+
+.catalog-item__btn {
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: -3px;
 }
 
 .catalog-item__line {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 1px;
 }
 
 @media (min-width: $tablet-width) {
   .catalog-item {
     flex-direction: column;
+    justify-content: flex-end;
     width: calc(50% - 30px);
-    box-sizing: border-box;
+    min-height: 432px;
     background-color: $color-dark-gray;
-    margin-bottom: 65px;
+    margin-bottom: 138px;
     border: none;
-    padding: 0 37px 40px;
+    padding: 0;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+
+    & img {
+      margin-top: -81px;
+      margin-bottom: 45px;
+    }
 
     &:nth-child(odd) {
       margin-right: 60px;
     }
 
-    & img {
-      margin-top: -60px;
-      margin-bottom: 45px;
+    &:nth-last-child(-n+2) {
+      margin-bottom: 0;
     }
   }
 
@@ -53,6 +81,9 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    padding: 0 30px;
+    box-sizing: border-box;
+    margin-top: -11px;
   }
 
   .catalog-item__title {
@@ -60,17 +91,36 @@
     text-align: center;
     width: 150px;
     align-self: center;
+    margin-bottom: 20px;
+  }
+
+  .catalog-item__title-link {
+    display: flex;
+    justify-content: center;
   }
 
   .catalog-item__list {
     font-size: 16px;
     line-height: 16px;
-    margin-bottom: 33px;
+    margin-bottom: 31px;
   }
 
   .catalog-item__line {
     border-bottom: $border;
     padding: 5px 0;
+    margin-bottom: 3px;
+  }
+
+  .catalog-item__field {
+    margin-right: 4px;
+  }
+
+  .catalog-item__value {
+    margin-left: 6px;
+  }
+
+  .catalog-item__btn {
+    width: calc(100% - 75px);
   }
 }
 
@@ -78,13 +128,22 @@
   .catalog-item {
     width: calc(25% - 60px);
     margin-right: 80px;
+    margin-bottom: 142px;
 
     &:nth-child(odd) {
       margin-right: 80px;
     }
 
+    &:nth-last-child(-n+4) {
+      margin-bottom: 0;
+    }
+
     &:nth-child(4n) {
       margin-right: 0;
+    }
+
+    & img {
+      margin-bottom: 43px;
     }
   }
 }
