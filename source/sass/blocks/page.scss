@@ -1,0 +1,11 @@
+.page {
+  &--nojs {
+    & .site-nav {
+      display: block;
+    }
+
+    & .main-nav__toggle {
+      display: none;
+    }
+  }
+}

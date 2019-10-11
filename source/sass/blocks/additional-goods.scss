@@ -54,7 +54,6 @@
   }
 
   .additional-goods__title {
-    @include block-divider;
 
     position: relative;
     font-size: 36px;
@@ -65,11 +64,6 @@
     margin-left: 28px;
     margin-bottom: 80px;
     padding: 0 38px;
-
-    &::before {
-      width: calc(100vw + 40px);
-      left: -70px;
-    }
   }
 
   .additional-goods__block {
@@ -115,11 +109,6 @@
 
     &::after {
       left: calc(50% - 643px);
-    }
-
-    &::before {
-      width: 200vw;
-      left: -100vw;
     }
   }
 

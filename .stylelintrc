@@ -1,6 +1,6 @@
 {
   "extends": "stylelint-config-htmlacademy",
-
+  "ignoreFiles": "./static/sass/blocks/normalize.scss",
   "plugins": [
     "stylelint-order"
   ],

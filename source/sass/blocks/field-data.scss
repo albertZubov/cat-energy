@@ -7,7 +7,7 @@
   &--phone {
     & svg {
       position: absolute;
-      right: 14px;
+      right: 17px;
     }
 
     & input:active ~ svg,
@@ -85,6 +85,12 @@
       font-size: 20px;
       padding: 10px 17px;
       margin-left: 16px;
+
+      &:active,
+      &:focus,
+      &:invalid {
+        padding: 9px 16px;
+      }
     }
   }
 
@@ -98,6 +104,10 @@
   .field-data {
     margin: 0;
     margin-bottom: 20px;
+
+    &--email {
+      margin-bottom: 0;
+    }
 
     &:last-child {
       margin-bottom: 0;

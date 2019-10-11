@@ -1,4 +1,4 @@
-# Личный проект «Мишка» [![Build statu][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
+# Личный проект «Cat-energy» [![Build statu][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Альберт Зубов](https://htmlacademy.ru/profile/id915403).
 * Наставник: [Олежка Зубов](https://htmlacademy.ru/profile/id42701)

@@ -1,12 +1,3 @@
-@media (min-width: $tablet-width) {
-  .page-main {
-    &--catalog,
-    &--form {
-      overflow-x: hidden;
-    }
-  }
-}
-
 @media (min-width: $desktop-width) {
   .page-main {
     position: relative;

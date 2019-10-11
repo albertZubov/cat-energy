@@ -91,23 +91,6 @@
   background-color: $color-border;
 }
 
-@mixin block-divider {
-  position: relative;
-  background: white;
-  width: fit-content;
-
-  &::before {
-    content: "";
-    position: absolute;
-    height: 3px;
-    background-color: #68b738;
-    z-index: -2;
-    top: calc(50% + 2px);
-    width: calc(100vw - 20px);
-    left: 0;
-  }
-}
-
 @mixin link-active {
   border-bottom: 2px solid $color-green;
   padding-bottom: 8px;

@@ -14,10 +14,6 @@
 
   &--contacts .form__title {
     width: 182px;
-
-    &::before {
-      top: calc(50% - 10px);
-    }
   }
 }
 
@@ -52,10 +48,8 @@
 
 .form__title {
   @include title-medium;
-  @include block-divider;
 
   margin: 28px 0 10px;
-  padding-right: 20px;
 }
 
 .form__comment {
@@ -76,7 +70,7 @@
   &:focus {
     border: 2px solid $color-gray;
     outline: none;
-    padding: 12px;
+    padding: 12px 13px 13px 12px;
     box-sizing: border-box;
   }
 }
@@ -89,7 +83,7 @@
 }
 
 .form__btn {
-  margin-bottom: 16px;
+  margin-bottom: 21px;
   font-size: 16px;
   line-height: 20px;
 }
@@ -103,15 +97,9 @@
   .form__title {
     font-size: 36px;
     line-height: 36px;
-    margin-left: -40px;
-    padding: 0 40px;
     margin-top: 30px;
     margin-bottom: 52px;
-
-    &::before {
-      width: calc(100vw + 40px);
-      left: -70px;
-    }
+    padding: 0;
   }
 
   .form__fieldset {
@@ -127,10 +115,6 @@
 
     &--contacts .form__title {
       width: fit-content;
-
-      &::before {
-        top: calc(50% + 4px);
-      }
     }
 
     &--checkbox .form__title {
@@ -165,6 +149,11 @@
     line-height: 30px;
     padding: 9px 18px;
     min-height: 173px;
+
+    &:active,
+    &:focus {
+      padding: 8px 18px 9px 17px;
+    }
   }
 
   .form__btn {
@@ -194,15 +183,6 @@
     padding-top: 65px;
   }
 
-  .form__title {
-    margin-top: 23px;
-
-    &::before {
-      width: 200vw;
-      left: -100vw;
-    }
-  }
-
   .form__fieldset {
     width: 100%;
 
@@ -210,6 +190,7 @@
     &--radio {
       width: calc(50% - 40px);
       box-sizing: border-box;
+      margin-bottom: 40px;
     }
 
     &--data {
@@ -217,7 +198,7 @@
     }
 
     &--contacts {
-      margin-bottom: 23px;
+      margin-bottom: 37px;
     }
 
     &--textarea {
