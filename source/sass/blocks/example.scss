@@ -1,3 +1,18 @@
+@mixin hide {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+@mixin show {
+  opacity: 1;
+  position: static;
+  transform: scaleX(1);
+}
+
 .example {
   background-color: $color-dark-gray;
   padding-bottom: 36px;
@@ -115,22 +130,6 @@
   border-radius: 5px;
 }
 
-.example__images-before {
-  position: absolute;
-  clip-path: inset(0 0 0 100%);
-  pointer-events: none;
-  text-align: center;
-  transition: clip-path 0.7s;
-}
-
-.example__images-after {
-  position: static;
-  clip-path: inset(0 0 0 0);
-  pointer-events: auto;
-  text-align: center;
-  transition: clip-path 0.7s;
-}
-
 .example__process {
   @include title-medium;
 
@@ -139,10 +138,8 @@
 
 .example__images {
   margin-bottom: 30px;
-
-  & picture {
-    clip-path: none !important;
-  }
+  position: relative;
+  overflow: hidden;
 }
 
 .example__process-description {
@@ -213,24 +210,47 @@
 
 @media (max-width: $mobile-width-only) {
   /* stylelint-disable */
+
+
   #checkbox:checked ~ .example__result .example__result-label::before {
     left: 3px;
     transition: all 0.25s;
   }
 
+  .example__images-before {
+    transform: scaleX(.5);
+  }
+
   #checkbox:checked ~ .example__images .example__images-after {
-    position: absolute;
-    top: 0;
-    pointer-events: none;
-    clip-path: inset(0 100% 0 0);
-    transition: clip-path 0.7s;
+    @include hide;
+    transform: scaleX(1.5);
   }
 
   #checkbox:checked ~ .example__images .example__images-before {
-    position: static;
-    pointer-events: auto;
-    clip-path: inset(0 0 0 0);
-    transition: clip-path 0.7s;
+    @include show;
+  }
+
+  .example__images {
+    & picture {
+      clip-path: none !important;
+    }
+  }
+
+  .example__images-before,
+  .example__images-after {
+    transition: transform .3s, opacity .3s;
+
+    picture {
+      text-align: center;
+    }
+  }
+
+  .example__images-before {
+    @include hide;
+  }
+
+  .example__images-after {
+    @include show;
   }
   /* stylelint-enable */
 }
