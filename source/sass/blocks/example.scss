@@ -116,13 +116,19 @@
 }
 
 .example__images-before {
-  display: none;
+  position: absolute;
+  clip-path: inset(0 0 0 100%);
+  pointer-events: none;
   text-align: center;
+  transition: clip-path 0.7s;
 }
 
 .example__images-after {
-  display: block;
+  position: static;
+  clip-path: inset(0 0 0 0);
+  pointer-events: auto;
   text-align: center;
+  transition: clip-path 0.7s;
 }
 
 .example__process {
@@ -133,6 +139,10 @@
 
 .example__images {
   margin-bottom: 30px;
+
+  & picture {
+    clip-path: none !important;
+  }
 }
 
 .example__process-description {
@@ -209,11 +219,18 @@
   }
 
   #checkbox:checked ~ .example__images .example__images-after {
-    display: none;
+    position: absolute;
+    top: 0;
+    pointer-events: none;
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 0.7s;
   }
 
   #checkbox:checked ~ .example__images .example__images-before {
-    display: block;
+    position: static;
+    pointer-events: auto;
+    clip-path: inset(0 0 0 0);
+    transition: clip-path 0.7s;
   }
   /* stylelint-enable */
 }
@@ -287,7 +304,6 @@
     width: 100%;
     padding: 2px 70px 0 70px;
     box-sizing: border-box;
-
   }
 
   .example__toggle {
