@@ -47,7 +47,7 @@
         var value = rangeValue / 100 * rangeWidth + rangeLeft;
         tagStyle.innerHTML =
         '.example::after{width: ' + value + 'px}' +
-        '.example{background-image:linear-gradient(to right,#eaeaea ' + value + 'px,#f2f2f2 ' + value + 'px)}';
+        '.example{background-image:linear-gradient(to right, #f2f2f2 ' + value + 'px, #eaeaea ' + value + 'px)}';
       };
 
       range.addEventListener('input', function (evt) {
